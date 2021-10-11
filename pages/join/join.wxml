@@ -1,0 +1,29 @@
+<page>
+    <view class="title">
+        <view class="choose">
+            <view class="text">全部队伍
+            </view>
+            <view class="arrow">></view>
+        </view>
+        <view class="search">搜索</view>
+    </view>
+    <!-- 按标签选 -->
+    <view class="item" wx:for="{{teams}}" wx:key="id" wx:for-item="item1">
+        <view class="img">
+            <image src="{{item1.logo_src}}"></image>
+        </view>
+        <view class="part2">
+            <view>队伍编号：{{item1.id}}</view>
+            <view>队伍名称：{{item1.name}}</view>
+            <view>人数：{{item1.num_of_people}}/{{item1.max_num}}</view>
+            <view>掌握以下特长优先：</view>
+            <view class="tags">
+                <view class="tag" wx:for="{{item1.need}}" wx:key="id">
+                    {{item}}
+                </view>
+            </view>
+        </view>
+        <!-- <button>加入</button> -->
+        <navigator url="../team_detail/team_detail" class="button">详情</navigator>
+    </view>
+</page>

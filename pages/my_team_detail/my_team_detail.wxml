@@ -1,0 +1,47 @@
+<page>
+    <view class="top">
+        <view class="items" wx:for="{{teams}}" wx:key="id" wx:for-item="items1">
+            <view class="img1">
+                <image src="{{items1.logo_src}}"></image>
+            </view>
+
+            <view class="text1">
+                <view>
+                    队伍名称：{{items1.name}}
+                </view>
+                <view>
+                    队伍编号：{{id}}
+                </view>
+                <view>
+                    队伍人数：{{items1.num_of_people}}/{{items1.max_num}}
+                </view>
+                <view>
+                    参赛类别：{{items1.column}}
+                </view>
+                <view>
+                    竞赛名称：{{items1.competition_name}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="title">成员如下</view>
+    <view class="item" wx:for="{{teams}}" wx:key="id" wx:for-item="item1">
+        <view class="img">
+            <image src="../../icon/logo3.png"></image>
+        </view>
+        <view>
+            <view>昵称：陈之帆</view>
+            <view>特长：</view>
+            <view class="tags">
+                <view class="tag" wx:for="{{item1.need}}" wx:key="id">
+                    {{item}}
+                </view>
+            </view>
+        </view>
+        <!-- <button>加入</button> -->
+        <view class="position">队长</view>
+    </view>
+    <view class="button">
+        <button bindtap="apply" style="width:60%;">解散</button>
+    </view>
+</page>

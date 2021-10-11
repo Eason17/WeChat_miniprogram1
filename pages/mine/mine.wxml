@@ -1,0 +1,39 @@
+<!--me.wxml-->
+
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="../personal_info/personal_info" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">
+      <image src="{{userInfo.avatarUrl}}" class="round-img"></image>
+    </view>
+    <view class="weui-cell__msg  weui-cell__ft_in-access info-content">
+      <view class="name">{{userInfo.nickName}}</view>
+      <view>
+        <icon type="success" size="15" class="icon-left"  />
+        个人信息</view>
+      </view>
+    </navigator>
+
+  </view>
+  
+<!-- <view class="weui-cells__title"></view>
+  <view class="weui-cells weui-cells_after-title"> -->
+    <!-- 帮带订单 -->
+    <!-- <navigator url="../orderITook/orderITook" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">我创建的队伍</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view> -->
+
+<view class="weui-cells__title"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="../my_teams/my_teams" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">我的队伍</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+
+<view class="weui-btn-area" style="margin-top:100rpx">
+    <button class="weui-btn" open-type="contact" session-from="weapp" type="primary">联系我们</button>
+
+    <button class="weui-btn" open-type="feedback" session-from="weapp" type="primary">意见反馈</button>
+  </view>

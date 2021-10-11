@@ -1,0 +1,31 @@
+<!--pages/groups/groups.wxml-->
+
+<view class="body">
+<view class="box">
+  <image src='/icon/logo.jpg' class="icon"></image>
+  <view class="title">    竞赛鹿社区
+    <text style="text-align:center;font-size:12px;margin-left:0px">当前248名用户在线
+      已有289张帖子</text>
+  </view>
+</view>
+
+<button bindtap="goToPost" class="button">发帖</button>
+<view class="postlist">
+    <view class="postdetail" wx:for="{{postlist}}" wx:key="{{item.id}}" bindtap = "goToDetail"
+    data-id="{{item.id}}">
+    <!--因为不确定帖子的数量，而且数量太多也没法写代码，所以使用遍历遍历js文件data里的postlist数据，
+    该数据是一个列表包含了一个帖子的外显内容-->
+    <!--使用bindtap绑定我在js中定义的gotodetail函数可以完善点击帖子进入帖子看具体内容的逻辑，因为要
+    辨识不同的帖子所以要定义id这样每次点击帖子的时候电脑就知道获取哪个帖子的内容-->
+    <view>
+      <view class="title1">{{item.title}}</view>
+      <view class="content">{{item.content}}</view>
+      <view class="likebox">
+        <image src='/icon/like.jpg' class="like"></image>
+        <image src='/icon/comment1.jpg' class="comment"></image>
+        <view class="date">{{item.add_date}}</view>
+      </view>
+    </view> 
+    </view>
+  </view>
+</view>

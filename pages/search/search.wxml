@@ -1,0 +1,30 @@
+<view>
+<view class="zhezao" hidden="{{flag}}">
+  <view class="t_w">
+ 
+    <!--右上角图标开始-->
+    <view class="t_image"  bindtap="conceal">
+      <image class="t_image1" src="../../image/cross.png" ></image>
+    </view>
+    <!--右上角图标结束-->
+ 
+    <!--弹出框开始-->
+    <view class="tanchu_view">
+      <view>
+        <view class="bg_view">遮罩层</view>
+        <view class="txtys">点击确定遮罩层</view>
+         <!--确定开始-->
+        <view class="txtsure"  >
+          <view class="txtsurebg" bindtap="conceal">
+              <text class="txtsurename">确定</text>
+          </view>        
+        </view>
+         <!--确定结束-->
+       </view>
+    </view>
+    <!--弹出框结束-->
+  </view>
+</view>
+</view>
+ 
+<view bindtap="show">点我显示</view>

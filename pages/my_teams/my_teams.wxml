@@ -1,0 +1,23 @@
+<page>
+
+    <!-- 按标签选 -->
+    <view class="item" wx:for="{{teams}}" wx:key="id" wx:for-item="item1">
+        <view class="img">
+            <image src="{{item1.logo_src}}"></image>
+        </view>
+        <view class="part2">
+            <view>队伍编号：93</view>
+            <view>队伍名称：竞赛鹿</view>
+            <view>人数：1/{{item1.max_num}}</view>
+            <view>比赛：2021年（第十三届）上海市大学生计算机应用能力大赛</view>
+            <!-- <view>掌握以下特长优先：</view>
+            <view class="tags">
+                <view class="tag" wx:for="{{item1.need}}" wx:key="id">
+                    {{item}}
+                </view>
+            </view> -->
+        </view>
+        <!-- <button>加入</button> -->
+        <navigator url="../my_team_detail/my_team_detail" class="button">查看</navigator>
+    </view>
+</page>

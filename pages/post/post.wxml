@@ -1,0 +1,37 @@
+<view id = "body">
+  <text>\n</text>
+  <form bindsubmit="formSubmit" id='1' bindreset="formReset"> 
+  <!--发帖表单提交-->
+    <view class="i-input">
+      <text>主题</text>
+      <input name="title" type="textarea"  title="主题" autofocus placeholder="想个好标题吧！" ></input>
+    </view>
+    <view class="i-input">
+      <text>内容</text>
+      <input name="content" type="textarea"  title="内容" autofocus placeholder="想个好内容吧！" ></input>
+    </view>
+    <panel title="group-类型">
+    <!--设置一个radio让用户选择发帖的类型-->
+      <radio-group class = "radiocontainer" current="{{current}}" bindchange="handleTypeChange">
+        <radio  wx:for="{{type}}" wx:key="{{item.id}}" value="{{item.name}}" checked="true">
+        <!--最后一项默认勾选，同样，帖子的类型在js文件当中遍历-->
+          <text>{{item.name}}</text>
+        </radio>
+      </radio-group>
+    </panel>
+    <view class="logo">
+      <view class='logo_img'>
+      <!--点击图片会触发上传图片-->
+        <image id="upimg" bindtap="upimg" src='../../images/index1.jpg' name="files"></image> 
+      </view>
+      <!--浏览机器内存上传图片-->
+      <block wx:for="{{img_arr}}" wx:key="{{index}}"> 
+        <view class='logoinfo'>    
+          <image src='{{item}}'></image>
+        </view>  
+      </block>
+    </view>
+    <button class='btn' formType="submit" bindtap="listenerButton">发布</button>
+    <modal title="确认发帖" hidden="{{hiddenModal}}" confirm-text="确定" cancel-text="退出" bindconfirm="listenerConfirm" bindcancel="listenerCancel" ></modal>
+  </form>
+</view>

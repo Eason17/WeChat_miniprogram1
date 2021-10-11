@@ -1,0 +1,72 @@
+/* pages/content/content.wxss */
+page {
+  background-color: white;
+}
+
+.top {
+  margin: 0rpx 0rpx;
+  padding: 10rpx 5rpx 15rpx;
+  background-color: rgb(235, 235, 235);
+}
+
+.mark .title {
+  /* margin-top: 10rpx; */
+  /* margin-left: 100rpx; */
+  font-size: 15px;
+  font-weight: bold;
+  text-align:center ;
+  justify-content: center;
+  color: red;
+}
+.img {
+  width: 100%;
+  display: flex;
+  text-align:center;
+  vertical-align:middle;
+  justify-items: center;
+
+}
+
+image {
+  margin: 0 auto;
+  width: 90%;
+  padding: auto;
+}
+
+
+.h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.h3 {
+  font-size: 18px;
+  color: gray
+}
+
+.elem {
+  margin: 0 0 40rpx 0;
+}
+
+.content {
+  padding: 0 40rpx;
+  margin: auto;
+}
+
+.option {
+  padding: 17rpx 0;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  bottom: 0rpx;
+  background-color: rgb(240, 240, 240);
+}
+
+.option_item {
+  border-style: none solid;
+  border-width: 3.4rpx;
+  border-color: rgba(200, 200, 200, 0.8);
+  flex: 1;
+  text-align: center;
+}

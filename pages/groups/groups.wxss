@@ -1,0 +1,86 @@
+/* pages/groups/groups.wxss */
+.box
+{
+  display: flex;
+  flex-direction: row;
+  height:100px;
+  margin-bottom: 10px;
+  border: 3px outset rgb(121, 196, 247);
+  background-color:rgb(121, 196, 247);
+  padding:0px;
+}
+.icon
+{
+  margin-left:50px;
+  width: 100px;
+  height:100px;
+  padding-top: 0px;
+}
+.title
+{
+  text-align:center;
+  white-space:pre-wrap;
+  font-size:20px;
+  margin-left: 70px;
+  margin-top:10px;
+  margin-bottom:0px;
+  padding:0px;
+}
+
+.postlist{
+  min-height:100rpx;
+  padding:15rpx;
+}
+.postdetail{
+  white-space:pre-wrap;
+  padding-bottom:20rpx;
+  border-top:5rpx solid rgb(182, 207, 245);
+}
+
+.postdetail text{
+  white-space:pre-wrap;
+  width:700rpx;
+  line-height:60rpx;
+  font-size:40rpx;
+}
+
+
+.useronline{
+  text-align:center;
+  margin-top: 40px;
+  margin-right:0px;
+  font-size: 11px;
+}
+
+.button{
+
+  color:black;
+  background-color:#b8e2cd;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.title1{
+  font-size: 20px;
+  margin-left:0px
+}
+.content{
+  font-size: 15px;
+  margin-left: 0px;
+}
+.date{
+  font-size: 10px;
+}
+.likebox{
+  display: flex;
+  flex-direction: row;
+  margin-left:280px;
+}
+.like{
+  width:18px;
+  height: 18px;
+
+}
+.comment{
+  width:18px;
+  height:18px;
+}

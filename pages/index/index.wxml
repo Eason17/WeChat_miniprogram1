@@ -1,0 +1,100 @@
+<!-- pages/types/types.wxml -->
+<!-- 搜索框 -->
+<!-- catchtap="concealType" -->
+<page bindtap="concealType">
+    <view>
+        <view class="header">
+            <view catchtap="showType" class="type">
+                <text class="iconfont icon-icon-1"></text>
+                分类
+            </view>
+            <navigator class="search_input" open-type="navigate">
+                <text class="iconfont icon-search"></text>
+                <input placeholder="搜索" value="{{inputValue}}" />
+            </navigator>
+        </view>
+        <!-- 轮播图 -->
+        <view class='index_swiper'>
+            <swiper autoplay circular interval="2000" indicator-dots indicator-color="rgba(0,0,0,.2)">
+                <block wx:for="{{swiperList}}" wx:key="id">
+                    <!-- <navigator url=''> -->
+                    <swiper-item>
+                        <image mode='widthfix' src="{{item.url}}" mode="aspectFill"></image>
+                    </swiper-item>
+                    <!-- </navigator> -->
+                </block>
+            </swiper>
+        </view>
+
+        <!-- 分类的项 -->
+        <view class="categorys" hidden="{{flag}}">
+            <scroll-view scroll-y class="cates">
+                <!-- index引用变量，这里是个三元表达式 -->
+                <view class="cate {{index===cate_level2?'active':''}}" wx:for="{{categorys}}" wx:key="id"
+                    catchtap="chooseCate" data-index="{{index}}">
+                    {{item.subject}}
+                </view>
+            </scroll-view>
+            <view class="sub_cates">
+                <view class="sub_cate" hover-class="sub_cate_active" wx:for="{{sub_cates}}" wx:key="id" data-index="{{index}}" bindtap="chooseSubCate">
+                    {{item.subject}}
+                </view>
+            </view>
+        </view>
+
+    </view>
+
+    <!-- 团队类和个人类 -->
+    <view class="tabs" binditemChange="binditemChange">
+        <view class="tabs_title">
+            <view wx:for="{{tabs}}" wx:key="id" class="title_item {{index===cate_level1?'active2':''}}"
+                bindtap="changeType" data-index="{{index}}">{{item.name}}
+            </view>
+        </view>
+    </view>
+
+
+    <!-- 这是信息页 -->
+    <view class="items">
+        <navigator class="item" wx:for="{{simple_info}}" wx:key="id" url="../content/content">
+            <image class="left item_img" src="{{item.src}}" lazy-load="true" binderror="" bindload="" />
+            <view class="right">
+                <view class="">
+                    <view class="tags">
+                        <view class="title">
+                            截止时间：
+                        </view>
+                        {{item.deadline}}
+                    </view>
+                    <view class="tags">
+                        <view class="title">
+                            主办单位：
+                        </view>
+                        {{item.sponsor}}
+                    </view>
+
+                    <view class="tags">
+                        <view class="title">
+                            竞赛简述：
+                        </view>
+                        <view class="content">
+                            {{item.introduction}}
+                        </view>
+                    </view>
+                </view>
+                <!--类别标签与发布时间  -->
+                <view class="tags">
+                    <view class="tag tag_type title">
+                        竞赛类别：
+                    </view>
+                    <view class="comp">
+                        {{item.tag}}
+                    </view>
+                    <view class="time">
+                        {{item.release_time}}
+                    </view>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</page>

@@ -1,0 +1,87 @@
+<!--pages/content'/content.wxml-->
+<page>
+  <view wx:for="{{comp_info}}" wx:key="id" wx:for-item="item1" space="ensp">
+    <view class="top">
+      <text class="title">{{item1.title}}</text>
+    </view>
+    <view class="img">
+      <image mode="widthFix" src="{{item1.src}}"></image>
+    </view>
+    <view class="mark">
+      <view class="title">{{item1.title}}</view>
+      <view class="title">截止日期：{{item1.ddl}}</view>
+      <view class="title">{{item1.url}}
+      </view>
+    </view>
+    <view class="content">
+
+      <view class="elem">
+        <view class='h2'>大赛背景：</view>
+        <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item1.background}}</text>
+      </view>
+
+      <view class="elem">
+        <view class="class='h2'">
+          组织单位：
+        </view>
+        <view wx:for="{{item1.organization}}" wx:key="id">
+          {{item}}
+        </view>
+      </view>
+
+      <view class="elem">
+        <view class="class='h2'">
+          参赛要求：
+        </view>
+        <view wx:for="{{item1.entry_requirements}}" wx:key="id">
+          {{item}}
+        </view>
+      </view>
+
+      <view class="elem">
+        <view class="class='h2'">
+          赛程安排：
+        </view>
+        <view wx:for="{{item1.time}}" wx:key="id">
+          {{item}}
+        </view>
+      </view>
+
+      <view class="elem">
+        <view class="class='h2'">
+          注意事项：
+        </view>
+        <view wx:for="{{item1.other}}" wx:key="id">
+          {{item}}
+        </view>
+      </view>
+
+      <view class="elem">
+        <view class="class='h2'">
+          奖项设置：
+        </view>
+        <view wx:for="{{item1.award}}" wx:key="id">
+          {{item}}
+        </view>
+      </view>
+
+      <view class="elem">
+        <view class="class='h2'">
+          报名/联系方式：
+        </view>
+        <view wx:for="{{item1.contact}}" wx:key="id">
+          {{item}}
+        </view>
+      </view>
+      <text class="h2">{{item.tag}}</text>
+    </view>
+  </view>
+  <view class="option">
+    <navigator url="../set_up/set_up" class="option_item">
+      创建队伍
+    </navigator>
+    <navigator url="../join/join" class="option_item">
+      加入队伍
+    </navigator>
+  </view>
+</page>

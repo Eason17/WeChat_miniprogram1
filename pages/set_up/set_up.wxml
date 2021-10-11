@@ -1,0 +1,51 @@
+<page>
+    <view class="logo_choose">
+        <view class="img">
+            <image src="../../icon/logo.jpg">0</image>
+        </view>
+        <view class="img_text">
+            队伍logo
+        </view>
+    </view>
+    <view class="info_item">
+        <input type="text" data-name="team_name" placeholder="请输入队伍名称">
+        </input>
+    </view>
+    <view class="info_item">
+        比赛类别：<text>计算机类</text>
+    </view>
+    <view class="info_item">
+        <view>
+            期待队友①：
+        </view>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange1" bindcolumnchange="bindMultiPickerColumnChange1"
+            value="{{multiIndex1}}" range="{{multiArray1}}">
+            <view class="send_picker">
+                {{multiArray1[0][multiIndex1[0]]}}，{{multiArray1[1][multiIndex1[1]]}}
+            </view>
+        </picker>
+    </view>
+    <view class="info_item">
+        <view>
+            期待队友②：
+        </view>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange2" bindcolumnchange="bindMultiPickerColumnChange2"
+            value="{{multiIndex2}}" range="{{multiArray2}}">
+            <view class="send_picker">
+                {{multiArray2[0][multiIndex2[0]]}}，{{multiArray2[1][multiIndex2[1]]}}
+            </view>
+        </picker>
+    </view>
+    <view class="info_item">
+        <view>
+            期待队友③：
+        </view>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange3" bindcolumnchange="bindMultiPickerColumnChange3"
+            value="{{multiIndex3}}" range="{{multiArray3}}">
+            <view class="send_picker">
+                {{multiArray3[0][multiIndex3[0]]}}，{{multiArray3[1][multiIndex3[1]]}}
+            </view>
+        </picker>
+    </view>
+    <button style="width:85%;" bindtap='uploadData' type="primary">创建队伍</button>
+</page>
