@@ -1,0 +1,22 @@
+/**app.wxss**/
+@import "./styles/iconfont.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+/*
+主题颜色通过改变变量来改变
+app.wxss定义变量
+page.wxss运用变量
+*/
+page{
+  --themeColor:#1296DB;
+}
+image{
+  width: 100%;
+}

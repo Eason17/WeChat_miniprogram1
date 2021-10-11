@@ -1,0 +1,48 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/types/types",
+        "pages/mine/mine",
+        "pages/logs/logs",
+        "pages/groups/groups",
+        "pages/content/content",
+        "pages/set_up/set_up",
+        "pages/join/join",
+        "pages/my_teams/my_teams",
+        "pages/team_detail/team_detail",
+        "pages/personal_info/personal_info",
+        "pages/my_team_detail/my_team_detail"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#1296DB",
+        "navigationBarTitleText": "竞赛鹿",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#000000",
+        "selectedColor": "#1296DB",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "icon/index.png",
+                "selectedIconPath": "icon/_index.png"
+            },
+            {
+                "pagePath": "pages/groups/groups",
+                "text": "社区",
+                "iconPath": "icon/groups.png",
+                "selectedIconPath": "icon/_groups.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我",
+                "iconPath": "icon/mine.png",
+                "selectedIconPath": "icon/_mine.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

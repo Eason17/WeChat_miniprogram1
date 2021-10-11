@@ -1,0 +1,126 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.10.4",
+  "appid": "wxe789219369966bf3",
+  "projectname": "%E7%AB%9E%E8%B5%9B%E9%B9%BF",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/content/content",
+          "pathName": "pages/content/content",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/set_up/set_up",
+          "pathName": "pages/set_up/set_up",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/join/join",
+          "pathName": "pages/join/join",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my_team/my_team",
+          "pathName": "pages/my_team/my_team",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/team_detail/team_detail",
+          "pathName": "pages/team_detail/team_detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my_teams/my_teams",
+          "pathName": "pages/my_teams/my_teams",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/personal_info/personal_info",
+          "pathName": "pages/personal_info/personal_info",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my_team_detail/my_team_detail",
+          "pathName": "pages/my_team_detail/my_team_detail",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
